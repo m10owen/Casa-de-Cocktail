@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Cocktail</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #message {
+            height: 60px; 
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="container">
+        <h1>Make A Drink</h1>
+<fieldset>
+    <legend>Base of the Drink</legend>
+    <form id="base" type="get" action="">
+        <select name="baseDrink" id="baseDrink" required>
+            <option value="">--Please choose an option--</option>
+            <option value="vodka">Vodka</option>
+            <option value="tequila">Tequila </option>
+            <option value="wiskey">Whiskey</option>
+            <option value="rum">Rum </option>
+            <option value="gin">Gin</option>
+            <option value="brandy">Brandy </option>
+          </select>
+
+</fieldset>
+<br> 
+
+<fieldset>
+    <legend>Choose Your Ingredients:</legend>
+    <fieldset>
+        <label>Your First Ingredeient: </label>
+            <input type="text" id="ingredient1" name="Ingredient1" required>
+    </fieldset>
+    <br>
+    
+    <fieldset>
+        <label>Your Second Ingredeient: </label>
+            <input type="text" id="ingredient2" name="Ingredient2" required>
+    </fieldset>
+        <br> 
+        
+        <fieldset>
+            <label>Your Third Ingredeient: </label>
+                <input type="text" id="ingredient3" name="Ingredient3" required>
+        </fieldset>
+            <br> 
+
+               
+</fieldset>
+<button onclick="getIngredients()">Mix Drink</button>
+</form> 
+    </section>
+
+    <script>
+        let base = document.getElementById("baseDrink"); 
+        let Ingredeient1 = document.getElementById("ingredient1"); 
+        let Ingredeient2 = document.getElementById("ingredient2"); 
+        let Ingredeient3 = document.getElementById("ingredient3"); 
+        let allIngredients = []; 
+
+        function getIngredients(){
+            allIngredients.push(base, Ingredeient1, Ingredeient2, Ingredeient3); 
+            console.log(allIngredients);
+        }
+        
+
+
+
+
+    </script>
+</body>
+</html>
